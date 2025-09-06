@@ -1,0 +1,32 @@
+{
+  "log_group_messages": {
+    "description": "是否记录群聊消息",
+    "type": "bool",
+    "default": true,
+    "hint": "启用后，所有群聊消息都将被记录到数据库中。"
+  },
+  "log_private_messages": {
+    "description": "是否记录私聊消息",
+    "type": "bool",
+    "default": false,
+    "hint": "启用后，所有私聊消息都将被记录到数据库中。请注意隐私风险。"
+  },
+  "inject_context": {
+    "description": "是否向LLM注入历史聊天记录",
+    "type": "bool",
+    "default": true,
+    "hint": "启用后，在请求LLM时，会自动附加上下文聊天记录。"
+  },
+  "max_history_messages": {
+    "description": "注入历史记录的最大条数",
+    "type": "int",
+    "default": 10,
+    "hint": "向LLM注入上下文时，从数据库中读取最近的N条消息。"
+  },
+  "log_self_messages": {
+    "description": "是否记录机器人自己发送的消息",
+    "type": "bool",
+    "default": false,
+    "hint": "启用后，机器人自己的回复也会被记录。这可能导致上下文重复，请谨慎开启。"
+  }
+}
