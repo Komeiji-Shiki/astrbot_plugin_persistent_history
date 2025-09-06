@@ -19,7 +19,7 @@ from astrbot.api.message_components import Plain, Image, BaseMessageComponent
     "PersistentChat", 
     "YourName", 
     "一个可以持久化保存聊天记录（包括图片），支持多模态LLM上下文，并提供管理命令的插件", 
-    "2.6.0" # 版本升级：修复消息重复注入问题，并精确实现对当前消息的增强逻辑
+    "0.2.6.0" # 版本升级：修复消息重复注入问题，并精确实现对当前消息的增强逻辑
 )
 class PersistentChatPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
